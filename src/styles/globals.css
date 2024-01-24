@@ -1,0 +1,51 @@
+:root {
+  --primary-blue-dark: #4361EE;
+  --primary-color: #5526B3;
+  --primary-red: #EA0000;
+  --primary-bg-color: #f7f4ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {}
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+:where(.css-dev-only-do-not-override-zl9ks2).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+  background: none !important;
+}
+
+a {
+  color: none !important;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}

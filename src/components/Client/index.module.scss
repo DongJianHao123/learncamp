@@ -1,0 +1,195 @@
+.client-home-container {
+    width: 100%;
+    min-height: calc(100vh - 64px);
+    display: flex;
+
+    .sider-bar {
+        background-color: var(--primary-bg-color);
+        width: 300px;
+
+        :global(.ant-menu-item) {
+            color: var(--primary-color);
+        }
+
+        :global(.ant-menu-submenu) {
+            color: var(--primary-color);
+        }
+
+        :global(.ant-menu-submenu-title) {
+            font-size: 1.2rem;
+        }
+
+        :global(.ant-menu-title-content) {
+            color: var(--primary-color);
+        }
+
+        :global(.ant-menu-item-selected) {
+            background: #C3B0F6;
+        }
+
+        :global(.ant-menu-dark-inline) {
+            background: none !important;
+        }
+
+        :global(.ant-menu-submenu-arrow) {
+            color: var(--primary-color);
+        }
+
+        .link {
+            color: var(--primary-color);
+        }
+    }
+
+    .content {
+        flex: 1;
+        padding: 20px 50px;
+        min-height: 100%;
+        height: max-content;
+
+        .title-wrap {
+            display: flex;
+            width: 100%;
+            height: 120px;
+            background-color: var(--primary-bg-color);
+            border-radius: 4px;
+            align-items: center;
+            padding: 0 50px;
+
+            .left {
+
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .title {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    line-height: 16px;
+                    letter-spacing: 0px;
+                    color: var(--primary-color);
+                }
+
+                .desc {
+                    font-size: 1rem;
+                    font-weight: normal;
+                    line-height: 1rem;
+                    letter-spacing: 0px;
+                    color: #3D3D3D;
+                }
+            }
+
+            img {
+                width: auto;
+                height: 90px;
+            }
+        }
+
+        .steps {
+            margin-top: 2rem;
+
+            .general-title {
+                font-family: Inter;
+                font-size: 1rem;
+                font-weight: bold;
+                line-height: 1rem;
+                letter-spacing: 0px;
+                color: #35414B;
+            }
+
+            .step {
+                margin: 1rem;
+                padding-left: 1rem;
+
+
+                .title {
+                    font-family: Alibaba PuHuiTi 2.0;
+                    font-size: 1rem;
+                    font-weight: normal;
+                    line-height: 1rem;
+                    letter-spacing: 0px;
+                    color: #35414B;
+
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    .step-num-icon {
+                        font-size: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 2px;
+                        color: #fff;
+                        width: 1.5rem;
+                        border-bottom: 0.5rem solid transparent;
+                        border-top: 0.2rem solid #3D3D3D;
+                        border-left: 0.8rem solid #3D3D3D;
+                        border-right: 0.8rem solid #3D3D3D;
+                        padding-bottom: 0.2rem;
+                    }
+                }
+
+                .step-content {
+                    border-left: 1px solid #D8D8D8;
+                    margin: 1rem 0 0 0.5rem;
+                    padding: 1rem 2rem;
+                    
+
+                    .register-btn {
+                        font-size: 1rem;
+                        text-align: center;
+                        letter-spacing: 2px;
+                        height: 2.4rem;
+                        line-height: 1rem;
+
+                        font-feature-settings: "kern"on;
+                        color: #FFFFFF;
+                        background-color: #9472FC;
+                    }
+
+                    .process {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+
+                        .process-item {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+
+                            a {
+                                font-family: Alibaba PuHuiTi 2.0;
+                                font-size: 1rem;
+                                font-weight: normal;
+                                line-height: 1rem;
+                                letter-spacing: 0px;
+
+                                color: #4361EE;
+                            }
+                        }
+                    }
+
+                    .projects {
+                        .project {
+                            a {
+                                font-family: Alibaba PuHuiTi 2.0;
+                                font-size: 1rem;
+                                font-weight: normal;
+                                line-height: 1rem;
+                                letter-spacing: 0px;
+                                color: #4361EE;
+                            }
+                        }
+                    }
+                    .jobs{
+                        width: 100%;
+                        display: flex;
+                        gap: 2rem;
+                        margin-top: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
