@@ -1,8 +1,8 @@
 // index.ts
 import axios, { AxiosResponse } from 'axios'
 import type { AxiosInstance, InternalAxiosRequestConfig } from 'axios'
-import { AxiosInitConfig, RequestInterceptors } from '@/types/Request'
-import { SafeAny } from '@/types/Safe'
+import { AxiosInitConfig, RequestInterceptors } from '@/core/types/Request'
+import { SafeAny } from '@/core/types/Safe'
 
 class Request {
     // axios 实例

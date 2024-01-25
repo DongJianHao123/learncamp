@@ -1,5 +1,5 @@
-import request from "@/service";
-import { IClient } from "@/types/client";
+import request from "@/core/service";
+import { IClient } from "@/core/types/client";
 
 // let CLIENT_ID = 41; //479 鸿蒙 450 rustedu //481 riscv 476 cicv //483 vue
 const PAGE_SIZE = 2000;

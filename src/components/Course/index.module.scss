@@ -71,12 +71,29 @@
             gap: 2rem;
             justify-content: center;
 
+            margin: 1rem;
+
             li {
                 cursor: pointer;
-            }
-            .action{
+                font-family: Inter;
+                font-size: 1.2rem;
+                font-weight: normal;
+                line-height: 16px;
+                letter-spacing: 0px;
+                padding: 0.8rem 0;
 
+                color: #3D3D3D;
             }
+
+            .action {
+                font-weight: bold;
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+
+        .tab-content {
+            width: 100%;
+            padding: 0 10rem;
         }
     }
 }

@@ -1,6 +1,6 @@
 
 
-import { IJob } from '@/types/job'
+import { IJob } from '@/core/types/job'
 import Link from 'next/link'
 import styles from './index.module.scss'
 

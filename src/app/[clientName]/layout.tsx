@@ -1,4 +1,4 @@
-import MainLayout from "@/layout"
+import MainLayout from "@/components/layout"
 import { ReactNode } from "react"
 
 interface IProps {

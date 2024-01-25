@@ -1,12 +1,14 @@
 import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
 import calcReducer from './reducer/calc'
 import currClientReducer from './reducer/currClient';
+import loginModalOpenReducer from './reducer/loginModalOpen';
 import { Provider } from 'react-redux';
 import { ReactNode } from 'react';
 // ...
 
 const store = configureStore({
   reducer: {
+    loginModalOpen:loginModalOpenReducer,
     currClient: currClientReducer,
     // users: usersReducer,
     calc: calcReducer

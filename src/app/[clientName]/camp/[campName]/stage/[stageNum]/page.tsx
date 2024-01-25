@@ -1,5 +1,5 @@
 import { fetchClientByClientName } from "@/api";
-import { apiCourse } from "@/pages/api/course";
+import { apiCourse } from "@/api/fakeData/course";
 import Course from "@/components/Course";
 interface IParam {
     clientName: string

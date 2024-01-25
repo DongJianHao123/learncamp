@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './index.module.scss'
-import { useAppSelector } from '@/store/hooks'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
 import { selectCurrClient } from '@/store/reducer/currClient'
 import Image from 'next/image'
+import { setLoginModalOpen } from '@/store/reducer/loginModalOpen'
 
 
 type Menu = {
@@ -66,7 +67,13 @@ const menus: Menu[] = [
 const Header = () => {
     const [currentPath, setCurrentPath] = useState('')
     const currClient = useAppSelector(selectCurrClient)
+    const dispatch = useAppDispatch()
     const { name, homePageInfo } = currClient
+
+    const handleOpenLoginmodal = () => {
+        dispatch(setLoginModalOpen(true))
+    }
+
     useEffect(() => {
         if (currClient && currClient.id > 0) {
             console.log(currClient);
@@ -84,7 +91,7 @@ const Header = () => {
             {/* target={currentPath === menu.path ? '' : '_blank'} */}
             {menus.map((menu) => <li key={menu.index}><Link href={menu.path} onClick={() => setCurrentPath(menu.path)} className={currentPath === menu.path ? styles['active'] : ''} >{menu.title}</Link> </li>)}
         </ul>
-        <div className={styles["login-wrap"]}>登录</div>
+        <div className={styles["login-wrap"]} onClick={handleOpenLoginmodal} >登录</div>
     </div>
 }
 

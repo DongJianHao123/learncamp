@@ -5,6 +5,7 @@ import { AntdRegistry } from '@ant-design/nextjs-registry'
 import { ReduxProvider } from '@/store'
 
 import '@/styles/globals.css'
+import LoginModal from '@/components/LoginModal'
 
 export const metadata: Metadata = {
   title: '训练营',
@@ -27,6 +28,7 @@ export default function RootLayout({
           <AntdRegistry>
             <ReduxProvider>
               {children}
+              <LoginModal/>
             </ReduxProvider>
           </AntdRegistry>
         </ConfigProvider>

@@ -1,6 +1,6 @@
-import { apiCamp } from "@/pages/api/camp/get_camps";
+import { apiCamp } from "@/api/fakeData/camp/get_camps";
 import { fetchClientByClientName } from "."
-import { apiCourse, apiCourses } from "@/pages/api/course";
+import { apiCourse, apiCourses } from "@/api/fakeData/course";
 
 export const fetchStage = async (clientName: string, campId: string, stage: number) => {
     const client = await fetchClientByClientName(clientName);

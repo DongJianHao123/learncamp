@@ -1,5 +1,5 @@
 import delay from "@/common/utils/delay";
-import { IClient } from "@/types/client";
+import { IClient } from "@/core/types/client";
 export const apiClient = (clientName: string): Promise<IClient> => {
   return new Promise(async (resolve, reject) => {
     await delay(2000);
@@ -12,7 +12,7 @@ export const apiClient = (clientName: string): Promise<IClient> => {
       name: "鸿蒙智能座舱应用开发训练营",
       homePageInfo: {
         id: 1,
-        logoUrl: '/images/harmony-logo.png'
+        logoUrl: '/assets/images/harmony-logo.png'
       }
     }
     resolve(data)

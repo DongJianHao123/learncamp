@@ -1,0 +1,29 @@
+.login-modal {
+    :global(.ant-modal-content) {
+        padding: 0 !important;
+    }
+
+    .login-wrap {
+        padding: 0;
+        display: flex;
+        height: 80vh;
+        .content{
+            width: 50%;
+            padding: 4rem;
+        }
+
+        .right {
+            flex: 1;
+            width: auto;
+            height: 100%;
+        }
+    }
+
+}
+
+:global(.ant-modal-mask) {
+    backdrop-filter: blur(8px);
+    /* 应用模糊效果 */
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    /* 设置半透明背景 */
+}

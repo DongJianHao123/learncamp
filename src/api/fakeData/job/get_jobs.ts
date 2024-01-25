@@ -1,5 +1,5 @@
 import delay from "@/common/utils/delay"
-import { IJob } from "@/types/job"
+import { IJob } from "@/core/types/job"
 
 const jobs = (): IJob[] => ([
     {

@@ -1,7 +1,7 @@
-import { apiCamps } from '@/pages/api/camp/get_camps';
+import { apiCamps } from '@/api/fakeData/camp/get_camps';
 import { fetchClientByClientName } from '@/api';
 import ClientHomePage from '@/components/Client';
-import { apiJobs } from '@/pages/api/job/get_jobs';
+import { apiJobs } from '@/api/fakeData/job/get_jobs';
 interface IProps {
     params: { clientName: string }
 }

@@ -2,8 +2,10 @@
 import { Genders } from '@/common/constants'
 import { REGIONS } from '@/common/regions'
 import styles from '@/styles/pages/register/index.module.scss'
-import { IRegistration } from '@/types/register'
+import { IRegistration } from '@/core/types/register'
 import { Breadcrumb, Button, Cascader, Checkbox, Form, Input, Radio } from 'antd'
+import { useAppSelector } from '@/store/hooks'
+import { selectCurrClient } from '@/store/reducer/currClient'
 interface IProps {
     params: {
         clientName: string
@@ -26,22 +28,25 @@ const GOOD_AT_OPTIONS = [
 ]
 const Register = (props: IProps) => {
     const { clientName, campName } = props.params
+    const client = useAppSelector(selectCurrClient)
+    const { camps = [] } = client
+    console.log('camps',camps);
+    
+    const currCamp = camps.find(camp => camp.name === campName)
     const handleRegister = (registration: IRegistration) => {
         console.log(registration);
-
     }
     const onFinish = (values: any) => {
-        handleRegister({ ...values, id: 0, clientName, campName               })
-
+        handleRegister({ ...values, id: 0, clientName, campName })
     }
     return <div className={styles["register-container"]}>
         <Breadcrumb
             items={[
                 {
-                    title: <a>鸿蒙开发工程师培训</a>,
+                    title: <a href={`/${client.clientName}`}>{client?.name}</a>,
                 },
                 {
-                    title: <a>2024第一期训练营</a>
+                    title: <a href={`/${client.clientName}/camp/${currCamp?.name}`}>{currCamp?.title}</a>
                 },
                 {
                     title: '报名',

@@ -2,7 +2,7 @@
 import { Button, Menu, MenuProps } from 'antd'
 import styles from './index.module.scss'
 import Link from 'next/link'
-import { IClient } from '@/types/client'
+import { IClient } from '@/core/types/client'
 import Image from 'next/image'
 import { useState } from 'react'
 import { MessageOutlined, UsergroupAddOutlined } from '@ant-design/icons'
@@ -119,7 +119,7 @@ const ClientHomePage = ({ client }: IProps) => {
                                         {process.map((p, processIndex) => {
                                             return <li key={`process-${processIndex}`} className={styles['process-item']} >
                                                 <Link target='_blank' href={`/${client.clientName}/camp/${currCamp.name}/stage/${courseIndex}?tab=${p.path}`}>{processIndex === process.length - 1 && courseIndex > 0 ? `第${courseIndex}阶段${p.label}` : p.label}</Link>
-                                                {processIndex < process.length - 1 && <Image width={60} height={8} src={'/images/arrow.png'} alt='arrow' />}
+                                                {processIndex < process.length - 1 && <Image width={60} height={8} src={'/assets/images/arrow.png'} alt='arrow' />}
                                             </li>
                                         })}
                                     </ul>

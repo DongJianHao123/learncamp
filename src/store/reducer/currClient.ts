@@ -1,7 +1,7 @@
 'use client'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { RootState } from '..';
-import { IClient } from '@/types/client';
+import { IClient } from '@/core/types/client';
 
 
 export interface CurrClientState {

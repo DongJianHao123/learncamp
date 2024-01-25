@@ -20,7 +20,9 @@ const Course = (props: IProps) => {
             value: 1,
             label: '课程介绍',
             Render: ({ display }: ITabRenderProps) => {
-                return <div style={display ? {} : { display: 'none' }}>课程介绍</div>
+                return <div className={styles['course-intro-wrap']} style={display ? {} : { display: 'none' }}>
+                    <div className="ql-snow ql-editor" style={{ height: "auto" }} dangerouslySetInnerHTML={{ __html: course.introduction! }} />
+                </div>
             }
         },
         {
@@ -46,7 +48,7 @@ const Course = (props: IProps) => {
         },
         {
             value: 5,
-            label: '组队信息（可加入已有队伍）',
+            label: '组队信息',
             Render: ({ display }: ITabRenderProps) => {
                 return <div style={display ? {} : { display: 'none' }}>组队信息（可加入已有队伍）</div>
             }
@@ -78,12 +80,14 @@ const Course = (props: IProps) => {
         </div>
         <div className={styles["tabs"]}>
             <ul className={styles["title-bar"]}>
-                {Tabs.map(t => <li key={`tab-${t.value}`} onClick={() => setTabVal(t.value)}>{t.label}</li>)}
+                {Tabs.map(t => <li key={`tab-${t.value}`} className={tabVal === t.value ? styles['action'] : ''} onClick={() => setTabVal(t.value)}>{t.label}</li>)}
             </ul>
-            {Tabs.map(t => {
-                const { Render } = t
-                return <Render display={tabVal === t.value} key={`tab-render-${t.value}`} />
-            })}
+            <div className={styles['tab-content']}>
+                {Tabs.map(t => {
+                    const { Render } = t
+                    return <Render display={tabVal === t.value} key={`tab-render-${t.value}`} />
+                })}
+            </div>
         </div>
 
     </div>
