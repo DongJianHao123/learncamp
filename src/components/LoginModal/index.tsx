@@ -21,14 +21,14 @@ const LoginModal = () => {
                     <div className={styles["slogan"]}>推动技术进步，探索无限可能</div>
                 </div>
                 <div className={styles["login-tip"]}>Welcome  back! Please login to your account.</div>
-                <div className="login-form">
+                <div className={styles["login-form"]}>
                     <Input placeholder="手机号" />
                     <Input placeholder="验证码" suffix={<Button type="link">发送验证码</Button>} />
                     <Button type='primary'>登录</Button>
-                    <Icon component={WxIcon} />
+                    <Icon style={{width:'2.4rem'}} component={WxIcon} />
                 </div>
             </div>
-            <Image width={1000} height={2000} className={styles['right']} src="/assets/images/login-bg.png" alt="" />
+            <Image width={1000} height={2000} className={styles['right']} src="/images/login-bg.png" alt="" />
         </div>
     </Modal>
 }

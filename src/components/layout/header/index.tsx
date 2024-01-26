@@ -37,7 +37,12 @@ const menus: Menu[] = [
         index: 4,
         title: 'dsa-in-rust',
         path: '/dsa-in-rust'//'https://learningos.cn/projects' // 内实现 -- p0
+    },{
+        index: 5,
+        title: 'eulixos',
+        path: '/eulixos'//'https://learningos.cn/projects' // 内实现 -- p0
     },
+    // eulixos
     // {
     //     index: 3,
     //     title: '任务中心',

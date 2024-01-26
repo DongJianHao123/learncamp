@@ -27,11 +27,11 @@ const links = [
 const qrcodes = [
     {
         title: '社区公众号',
-        src: '/assets/images/footer-qrcode1.png'
+        src: '/images/footer-qrcode1.png'
     },
     {
         title: '社区小助手',
-        src: '/assets/images/footer-qrcode1.png'
+        src: '/images/footer-qrcode1.png'
     }
 ]
 

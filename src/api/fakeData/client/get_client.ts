@@ -12,7 +12,7 @@ export const apiClient = (clientName: string): Promise<IClient> => {
       name: "鸿蒙智能座舱应用开发训练营",
       homePageInfo: {
         id: 1,
-        logoUrl: '/assets/images/harmony-logo.png'
+        logoUrl: '/images/harmony-logo.png'
       }
     }
     resolve(data)
